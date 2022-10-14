@@ -4,18 +4,29 @@ canvas {
   top: 0;
   left: 0;
 }
-
+a {
+  text-decoration:none;
+  color:inherit;
+}
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
-  --spacing: 350px;
+  --spacing: 150px;
+  --subsectionspacing: 100px;
 
   font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-style: normal;
 }
-
-
+#headermenu {
+  width:100vw;
+  color:white;
+  position:absolute;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  z-index:100;
+}
 main {
   width: 100vw;
   color: white;
@@ -24,12 +35,12 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
-  display: grid;
+  display: flex;
+  flex-direction:column;
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h2, h3, blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -40,14 +51,36 @@ canvas {
   top: 0;
   left: 0;
 }
-
-
+form {
+    padding:1em;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.contactform {
+    
+}
+.inputname {
+    width:20%;
+}
+.inputemail {
+    width:20%;
+}
+h1  {
+    font-weight:400;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
 
   header {
     background: var(--dark-bg);
     grid-column: 2 / span 5;
     font-size: 2.5rem;
     padding: 2rem;
+    margin-left:1em;
+    width:500px;
+    height:400px;
+    font-weight:400;
     margin-bottom: var(--spacing);
   }
 
@@ -58,10 +91,45 @@ canvas {
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
+    margin-left:2em;
+    margin-right:1em;
+  }
+  .sectionright {
+    background: var(--dark-bg);
+  }
+  .sectionContainer {
+    display:flex;
+    flex-direction:row;
+    padding-right:2em;
+    padding-bottom:2em;
   }
 
+  .websitegif {
+    width:40em;
+    height:20em;
+    padding-bottom:1em;
+  }
+  .githubicon {
+    width:40px;
+    height:40px;
+  }
+  .linksContainer {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:space-around;
+    background:var(--dark-bg);
+    height:30.938rem;
+    padding-right:2em;
+  }
+  .website-links {
+    padding:1em;
+    display:flex;
+    justify-content:space-between;
+  }
   blockquote {
-    margin: 0;
+    margin-left: 5em;
+    margin-bottom:1em;
     padding: 0;
     grid-column: 2 / span 9;
     margin-bottom: var(--spacing);
@@ -69,6 +137,7 @@ canvas {
 
   blockquote p {
     color: black;
+    margin-bottom:1em;
     background-color: white;
     font-size: 4rem;
     display: inline;
@@ -78,3 +147,19 @@ canvas {
   .left {
     grid-column: 6 / 12;
   }
+button {
+    background-color : rgb(58, 68, 83); 
+    box-sizing : border-box; 
+    color : rgb(217, 222, 230); 
+    text-decoration : none solid rgb(217, 222, 230); 
+    border : 3px solid rgb(58, 68, 83); 
+    padding : 5px 10px; 
+    border-radius : 2px; 
+    font-family : "Roboto Mono"; 
+    font-weight : 400; 
+    font-size : 20px; 
+    transition : all 0.2s ease 0s; 
+}
+button:hover {
+    background-color:#3a4453 !important;
+}

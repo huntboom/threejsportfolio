@@ -1,77 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('7ujdxlhQ5pymESh5P');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_qrnyzom', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hunter's Website</title>
   </head>
   <body>
-
-    <canvas id="bg"></canvas>   
-
+    <canvas id="bg"></canvas>
+    <div id='headermenu'>
+        <a href="#projects">
+            <h3>Projects</h3>
+        </a>
+        <a href="#about">
+        <h3>About</h3>
+        </a>
+        <a href="#contact">
+        <h3>Contact</h3>
+        </a>
+        <a href="#resume">
+        <h3>Resume</h3>
+        </a>
+        <a href="https://github.com/huntboom/">
+        <h3>Github</h3>
+        </a>
+        </div>
     <main>
-
       <header>
         <h1>Hunter Karsseboom</h1>
-        <p>🚀 Welcome to my Portfolio!</p>
+        <p> Welcome to my Portfolio!</p>
       </header>
 
 
       <blockquote>
-        <p>I like making stuff and putting it on the internet</p>
+        <p>Get to know me through my projects:</p>
       </blockquote>
-
+      <div class="sectionContainer">
       <section>
-        <h2>🚀 Projects</h2>
+        <h2 id="projects"> Projects:</h2>
         <h3>QuadBox Controllers</h3>
         <p>
-           Built using React Three Fiber, users can customize and build their own fight-stick style controller, and then purchase their customized           creation. The 3d model of the controller updates dynamically so that the user can create a controller personalized to them. 
+           Built using React Three Fiber, users can customize and build their own fight-stick style controller, and then purchase their customized creation. The 3d model of the controller updates dynamically so that the user can create a controller personalized to them. Routing is done using React Router.
         </p>
-
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           This project was my first time using both React-Three-Fiber and React Router, it served as a rewarding learning experience. I hadn't used Three.js yet either at the time, so jumping straight to React-Three-Fiber provided an enticing challenge. I also decided to learn Zustand and utilize it over redux for this project as it uses less boilerplate and is well suited for a project of this size.  
         </p>
+      </section>
+      <div class='linksContainer'>
+        <IMG src="Quadbox.gif" class="websitegif"/>
+        <a class="website-links" href="https://github.com/huntboom/quadbox-controllers"><button>SOURCE CODE</button>
+        </a>
+        <a href="https://huntboom.github.io/quadbox-controllers/" class="website-links"><button>LIVE PREVIEW</button></a>
+      </div>
+      </div>
+      <div class="sectionContainer">
+      <section>
+          <h3>Doggogram</h3>
+          <p>An Instagram clone where users can only post photos of dogs. This site utilizes machine learning to verify that posts include a dog before the user posts. Built using NextJS, it has the core features of Instagram including user authentification through nextAuth, posting, commenting, liking and a UI that mirror's Instagram's. Utilizes Tensorflow for the dog image recognition. Hosted with vercel, uses firebase for backend to store posts data.</p>
+          <p>Building a website based on a pre-existing site served as an excellent way to practice my CSS skills and bolster my understanding of NextJS. This was also an exciting way to learn more about machine learning modules. </p>
+      </section>
+<div class='linksContainer'>
+        <a class="website-links" href="https://github.com/huntboom/quadbox-controllers">Github Repo of the Code
+        </a>
+        <a href="https://huntboom.github.io/quadbox-controllers/" class="website-links">Live Preview</a>
+      </div>
+      </div>
+      <div class="sectionContainer">
+      <section>
+          <h3>Twitter Clone</h3>
+          <p>Twitter Clone built using NextJS. Includes essential twitter features such as tweeting, replying, liking, and user authentification through nextauth. Utilizes firebase for hosting and Tailwind CSS to mimic the look and feel of twitter.</p>
+          <p>This project served as a valuable way to hone my css tailwind and flexbox skills. It was also my first time using vercel for hosting and storing backend data on firebase.</p>
+      </section>
+<div class='linksContainer'>
+        <a class="website-links" href="https://www.twitter.com">Github Repo of the Code
+        </a>
+        <a href="https://huntboom.github.io/quadbox-controllers/" class="website-links">Live Preview</a>
+      </div>
+      </div>
+      <div class="sectionContainer">
+      <section>
+          <h3>IMDB Clone</h3>
+          <p>IMDB clone created with NextJS and TailwindCSS to match the look of imdb.com and utilizing the imdb api to populate the results. Hosted on github pages.</p>
+          <p>This was my first experience using both NextJS and Tailwind CSS and served as an excellent introduction to both.</p>
+      </section>
+<div class='linksContainer'>
+        <IMG src="imdb-clone.gif" class="websitegif"/>
+        <a class="website-links" href="https://github.com/huntboom/quadbox-controllers"><button>Github Repo of the Code</button>
+        </a>
+        <a href="https://huntboom.github.io/quadbox-controllers/" class="website-links"><button>Live Preview</button></a>
+      </div>
+      </div>
 
+
+      <section>
+        <h3>Automation Bots</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Fully Automated Youtube channel that utilizes Twitch's REST API to find and sort through clips and download them. The clips are then edited through a python script and compiled into a video that is uploaded to YouTube leveraging Selenium, automating several YouTube features not available through YouTube's API. The bot also uses modern web-scraping techniques to gain meta-data useful for pushing the curated videos through the YouTube algorithm. 
         </p>
 
       </section>
-
+      <section>
+         <h3>Bopified:A Spotify Clone</h3>
+         <p>
+            A fully responsive CRUD Application that includes all the core features of spotify but with its own look and style. Created Using ReactJS and Spotify's context API. Cross browser compatibility, and utilizes Firebase for authentification, database, and storage.
+         </p>
+      </section>
+      <section>
+          <h3>Drone Parts Planner</h3>
+          <p>
+            Website for drone enthusiasts to build a 3d render of their ideal drone using an intuitive part selector. Includes estimations on price scraped from meta-data from other sellers of the parts needed to build. Built using React Three Fiber and hosted with Firebase.
+          </p>
+          <p>
+          As an avid drone building and flying enthusiast, I was disappointed to find that there was no sites available where users could find a comprehensive list of compatible drone parts and their corresponding prices, I wanted to change that so I built this site. Taking this a step further, I thought it'd be nice to see how the parts would all look together so I decided to use my skills in 3d modeling and ThreeJS/React-Three-Fiber so that I'd be able to see a 3d mockup of how the pieces would fit together. 
+          </p>
+      </section>
       <section class="light">
-        <h2>👩🏽‍Tools and Skills</h2>
+        <h2>🏽‍Tools and Skills</h2>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <h2>🏆 Accomplishments</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
+        <h3>Relevant Skills:</h3>
+                <p>-React and Redux</p>
+                <p>-Three.js and React Three Fiber</p>
+                <p>-NextJS</p>
+                <p>-Firebase</p>
+                <p>-TypeScript</p>
+                <p>-Tailwind CSS</p>
+                <p>-Vim/NeoVim</p>
+                <p>-Python</p>
+                <p>-Javascript</p>
+                <p>-REST APIs</p>
+                <p>-GIT-</p>
+                <p>-Linux-</p>
       </section>
-
-      <blockquote>
-        <p>The best way out is always through <br>-Robert Frost</p>
-      </blockquote>
 
       <section class="left">
-        <h2>🌮 Work History</h2>
+        <h2 id="about">About Me:</h2>
 
-        <h3>Amazon</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <p>When I'm not on my computer working away, you can find me playing soccer, 3d modeling and 3d printing, or putting together and flying racing drones. I've always had an affinity for tech and computers so web development has provided me an excellent medium to learn and grow.
+                  </p>
              </section>
 
       <blockquote>
-        <p>Contact me, let's work together:</p>
+        <p id="contact">Contact me, let's work together:</p>
+        <section class="contactform">
+            <div class='form'>
+            <form id="contact-form">
+             <input type="hidden" name="contact_number">
+             <label>Name</label>
+             <input type="text" name="user_name" class="inputname">
+             <label>Email</label>
+             <input type="email" name="user_email" class="inputemail">
+             <label>Message</label>
+             <textarea name="message"></textarea>
+             <input type="submit" value="Send">
+            </form>
+            </div>
+        </section>
       </blockquote>
-
+    <section>
+        <h2 id="resume">Resume</h2>
+        <button>Download Resume</button>
+        <button>View Resume Online</button>
+    </section>
 
     </main>
     
