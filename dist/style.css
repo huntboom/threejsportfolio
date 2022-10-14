@@ -55,8 +55,18 @@ form {
     padding:1em;
     display:flex;
     flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
-
+.contactform {
+    
+}
+.inputname {
+    width:20%;
+}
+.inputemail {
+    width:20%;
+}
 h1  {
     font-weight:400;
     font-family: 'Kdam Thmor Pro', sans-serif;
@@ -82,6 +92,7 @@ h1  {
     line-height: 1.5;
     margin-bottom: var(--spacing);
     margin-left:2em;
+    margin-right:1em;
   }
   .sectionright {
     background: var(--dark-bg);
@@ -118,6 +129,7 @@ h1  {
   }
   blockquote {
     margin-left: 5em;
+    margin-bottom:1em;
     padding: 0;
     grid-column: 2 / span 9;
     margin-bottom: var(--spacing);
@@ -125,6 +137,7 @@ h1  {
 
   blockquote p {
     color: black;
+    margin-bottom:1em;
     background-color: white;
     font-size: 4rem;
     display: inline;

@@ -71,7 +71,7 @@
            Built using React Three Fiber, users can customize and build their own fight-stick style controller, and then purchase their customized creation. The 3d model of the controller updates dynamically so that the user can create a controller personalized to them. Routing is done using React Router.
         </p>
         <p>
-           This project was my first time using both React-Three-Fiber and React Router, it served as a rewarding learning experience. I hadn't used Three.js yet either at the time, so jumping straight to React-Three-Fiber provided an enticing challenge. 
+           This project was my first time using both React-Three-Fiber and React Router, it served as a rewarding learning experience. I hadn't used Three.js yet either at the time, so jumping straight to React-Three-Fiber provided an enticing challenge. I also decided to learn Zustand and utilize it over redux for this project as it uses less boilerplate and is well suited for a project of this size.  
         </p>
       </section>
       <div class='linksContainer'>
@@ -83,9 +83,9 @@
       </div>
       <div class="sectionContainer">
       <section>
-          <h3>Instagram clone</h3>
-          <p>Instagram clone built using NextJS, featuring core features of Instagram including user authentification through nextAuth, posting, commenting, liking and a UI that mirror's Instagram's. Hosted with vercel, uses firebase for backend to store posts data.</p>
-          <p>Building a website based on a pre-existing site served as an excellent way to practice my CSS skills and bolster my understanding of NextJS.</p>
+          <h3>Doggogram</h3>
+          <p>An Instagram clone where users can only post photos of dogs. This site utilizes machine learning to verify that posts include a dog before the user posts. Built using NextJS, it has the core features of Instagram including user authentification through nextAuth, posting, commenting, liking and a UI that mirror's Instagram's. Utilizes Tensorflow for the dog image recognition. Hosted with vercel, uses firebase for backend to store posts data.</p>
+          <p>Building a website based on a pre-existing site served as an excellent way to practice my CSS skills and bolster my understanding of NextJS. This was also an exciting way to learn more about machine learning modules. </p>
       </section>
 <div class='linksContainer'>
         <a class="website-links" href="https://github.com/huntboom/quadbox-controllers">Github Repo of the Code
@@ -169,14 +169,14 @@
 
       <blockquote>
         <p id="contact">Contact me, let's work together:</p>
-        <section>
+        <section class="contactform">
             <div class='form'>
             <form id="contact-form">
              <input type="hidden" name="contact_number">
              <label>Name</label>
-             <input type="text" name="user_name">
+             <input type="text" name="user_name" class="inputname">
              <label>Email</label>
-             <input type="email" name="user_email">
+             <input type="email" name="user_email" class="inputemail">
              <label>Message</label>
              <textarea name="message"></textarea>
              <input type="submit" value="Send">
