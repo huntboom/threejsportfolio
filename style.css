@@ -92,7 +92,7 @@ h1  {
     margin-bottom: var(--spacing);
     margin-left:2em;
     margin-right:1em;
-    border-radius:15%;
+    border-radius:3em;
   }
   .sectionright {
     background: var(--dark-bg);
