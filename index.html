@@ -166,12 +166,27 @@
       </blockquote>
     <section>
         <h2 id="resume">Resume</h2>
-        <button>Download Resume</button>
-        <button>View Resume Online</button>
+        <button onclick="handleDownload()">Download Resume</button>
+        <a id="download-link" href="techresumev1.pdf" download></a>
+        <button onclick="goToLink()">View Resume Online</button>
     </section>
 
     </main>
-    
+    <script>
+        function handleDownload() {
+    // Get the download link element
+    const downloadLink = document.getElementById('download-link');
+
+    // Simulate a click on the download link
+    downloadLink.click();
+  }
+    </script>
+<script>
+  function goToLink() {
+    // Use the window.location property to navigate to the desired link
+    window.location = 'https://drive.google.com/file/d/10qj5HngPUrE7Nr0STuUfniX8t3NBJGjC/view?usp=sharing';
+  }
+</script>
     <script type="module" src="./main.js" ></script>
     <!--src="https://huntboom.github.io/threejsportfolio/main.js"-->
     <!--src="/main.js"-->
