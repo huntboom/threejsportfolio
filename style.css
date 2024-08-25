@@ -25,6 +25,7 @@ a {
   flex-direction:row;
   justify-content:space-evenly;
   z-index:100;
+  padding-bottom:1em;
 }
 main {
   width: 100%;
@@ -130,22 +131,27 @@ h1  {
     justify-content:space-between;
   }
   blockquote {
-    margin-left: 5em;
-    margin-bottom:1em;
+    margin: 2em 0;
     padding: 0;
     grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
   }
 
   blockquote p {
     color: black;
-    margin-bottom:1em;
     background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
-    border-radius:22px;
-    padding:0.3em;
+    font-size: 2.5rem;
+    display: inline-block;
+    line-height: 1.4;
+    border-radius: 22px;
+    padding: 0.5em;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    blockquote p {
+      font-size: 1.8rem;
+    }
   }
 
   .left {
@@ -204,9 +210,5 @@ button:hover {
   #headermenu {
     flex-direction: column;
     align-items: center;
-  }
-
-  blockquote p {
-    font-size: 2rem;
   }
 }
