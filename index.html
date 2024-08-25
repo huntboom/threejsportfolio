@@ -13,12 +13,21 @@
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
+                
+                // Send to Gmail
                 emailjs.sendForm('service_qrnyzom', 'contact_form', this)
                     .then(function() {
-                        console.log('SUCCESS!');
+                        console.log('SUCCESS! (Gmail)');
                     }, function(error) {
-                        console.log('FAILED...', error);
+                        console.log('FAILED (Gmail)...', error);
+                    });
+                
+                // Send to Outlook
+                emailjs.sendForm('service_334zi2i', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS! (Outlook)');
+                    }, function(error) {
+                        console.log('FAILED (Outlook)...', error);
                     });
             });
         }
