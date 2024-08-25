@@ -16,18 +16,18 @@
                 
                 // Send to Gmail
                 emailjs.sendForm('service_qrnyzom', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS! (Gmail)');
+                    .then(function(response) {
+                        console.log('SUCCESS! (Gmail)', response);
                     }, function(error) {
-                        console.log('FAILED (Gmail)...', error);
+                        console.error('FAILED (Gmail)...', error);
                     });
                 
                 // Send to Outlook
                 emailjs.sendForm('service_334zi2i', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS! (Outlook)');
+                    .then(function(response) {
+                        console.log('SUCCESS! (Outlook)', response);
                     }, function(error) {
-                        console.log('FAILED (Outlook)...', error);
+                        console.error('FAILED (Outlook)...', error);
                     });
             });
         }
@@ -175,7 +175,7 @@
             <form id="contact-form">
              <input type="hidden" name="contact_number">
              <label>Name</label>
-             <input type="text" name="user_name" class="inputname">
+             <input type="text" name="from_name" class="inputname">
              <label>Email</label>
              <input type="email" name="user_email" class="inputemail">
              <label>Message</label>
@@ -210,7 +210,7 @@
 </script>
     <script type="module" src="./main.js" ></script>
     <!--src="https://huntboom.github.io/threejsportfolio/main.js"-->
-    <!--src="/main.js"-->
+    <!--src="/main.js-->
 
 
 
